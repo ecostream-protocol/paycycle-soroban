@@ -1,0 +1,23 @@
+{
+  "name": "paycycle-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK, in-memory mock and keeper bot for the PayCycle Soroban subscriptions contract",
+  "license": "MIT",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "vitest run",
+    "keeper": "tsx src/keeper-cli.ts"
+  },
+  "dependencies": {
+    "@stellar/stellar-sdk": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}

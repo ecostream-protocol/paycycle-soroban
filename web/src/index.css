@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    background-image: radial-gradient(rgba(27, 26, 23, 0.08) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+  }
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-tangerine;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border-2 border-ink bg-white shadow-hard;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-ink px-4 py-2 text-sm font-semibold transition active:translate-x-px active:translate-y-px disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-tangerine text-white shadow-hard-sm hover:bg-tangerine-dark;
+  }
+  .btn-ink {
+    @apply btn bg-ink text-paper hover:bg-black;
+  }
+  .btn-plain {
+    @apply btn bg-white hover:bg-paper;
+  }
+  .field {
+    @apply w-full rounded-lg border-2 border-ink bg-white px-3 py-2 placeholder:text-ink/40;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+  .perforation {
+    border-top: 2px dashed rgba(27, 26, 23, 0.25);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

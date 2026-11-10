@@ -1,0 +1,12 @@
+{
+  "name": "paycycle",
+  "private": true,
+  "license": "MIT",
+  "workspaces": ["sdk", "web"],
+  "scripts": {
+    "dev": "npm --workspace web run dev",
+    "keeper": "npm --workspace paycycle-sdk run keeper",
+    "build": "npm --workspaces run build",
+    "test": "npm --workspaces run test && cd contracts && cargo test"
+  }
+}
